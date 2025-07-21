@@ -29,7 +29,7 @@ git clone https://github.com/Akashverma92/akash-portfolio.git
 cd akash-portfolio
 npm install
 npm start
-
+```
 ## Deployment
 To deploy to GitHub Pages or Vercel, follow their respective documentation. This portfolio is optimized for static hosting.
 
