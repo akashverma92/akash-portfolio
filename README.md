@@ -3,7 +3,7 @@
 A professional, responsive, and visually rich developer portfolio showcasing my work in **web development**, **machine learning**, and **app development** — built with modern technologies and a space-themed aesthetic.
 
 ##  Live Demo
- [Visit Website](https://your-live-link.com)
+ [Visit Website](https://akash-portfolio-rose.vercel.app/)
 
 ##  Features
 
@@ -26,15 +26,15 @@ A professional, responsive, and visually rich developer portfolio showcasing my 
 
 ```bash
 git clone https://github.com/Akashverma92/akash-portfolio.git
-cd ayush-portfolio
+cd akash-portfolio
 npm install
 npm start
 
-Deployment
+## Deployment
 To deploy to GitHub Pages or Vercel, follow their respective documentation. This portfolio is optimized for static hosting.
 
 
- Contact
+ ## Contact
  Email: akashverma.ara1@gmail.com
  LinkedIn: linkedin.com/in/akash-verma92
  GitHub: github.com/Akashverma92
