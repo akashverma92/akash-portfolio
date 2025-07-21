@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+html, body, #root {
+  background-color: #000 !important;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.about-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 14vh 5vw;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Great Vibes', cursive;
+  gap: 4rem;
+}
+
+.typewriter-wrapper {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: bold;
+}
+
+.royal-style {
+  background: radial-gradient(ellipse at center, rgba(40,20,5,0.7), rgba(10,5,2,0.9));
+  border: 2px solid #ffd700;
+  padding: clamp(20px, 4vw, 50px);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+  color: #fffbe6;
+  width: 100%;
+}
+
+.royal-style h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 20px;
+  color: #fffacd;
+}
+
+.royal-style p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+}
+
+.royal-style ul {
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  line-height: 1.8;
+  padding-left: 1em;
+  margin: 0;
+}
+
+.profile-circle {
+  width: clamp(160px, 22vw, 240px);
+  height: clamp(160px, 22vw, 240px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #00ccff;
+  box-shadow: 0 0 25px #00ccff88;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Layout for About + Profile on large screens */
+.about-header-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .about-overlay {
+    padding: 10vh 0.1vw;
+  }
+
+  .about-header-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-circle {
+    margin: 0 auto;
+  }
+}
+
+
+.about-header-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.about-header-row > .royal-style {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.about-header-row > .profile-circle {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .about-header-row {
+    flex-direction: column;
+    text-align: center !important;
+  }
+
+  .profile-circle {
+    margin: 0 auto;
+  }
+
+  .about-container {
+    padding: 0 1rem;
+  }
+  .royal-style {
+    width: 80%;
+  }
+}

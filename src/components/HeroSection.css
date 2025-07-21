@@ -1,0 +1,125 @@
+@import url('https://fonts.cdnfonts.com/css/winterly-regular');
+
+.hero-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: 'Winterly Regular', serif;
+  overflow: hidden;
+}
+
+/* Responsive Navbar (optional here if reused) */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: clamp(10px, 2vw, 20px);
+  z-index: 2;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1rem, 1.2vw, 1.1em);
+  padding: 6px 14px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  border-color: #00ccff;
+  transform: scale(1.15);
+}
+
+/* HERO TEXT */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 960px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 0 2vw;
+}
+
+.hero-text .emoji {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 8px;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.green-dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff84;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff84;
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 8px #00ff84; }
+  50% { box-shadow: 0 0 16px #00ff84; }
+}
+
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  margin: 10px 0;
+  color: #fffacd;
+  line-height: 1.2;
+  font-family: 'Winterly Regular', serif;
+}
+
+.hero-subtext {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-family: 'Georgia', serif;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #ccc;
+}
+
+.typewriter-wrapper {
+  font-size: clamp(1rem, 2vw, 1.2em);
+  margin-top: 10px;
+}
+
+.underline {
+  text-decoration: underline wavy #00ccff;
+  text-underline-offset: 4px;
+}
+
+/* RESPONSIVE OVERRIDES */
+@media (max-width: 480px) {
+  .hero-text {
+    padding: 0 5vw;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .typewriter-wrapper {
+    font-size: 1rem;
+  }
+}

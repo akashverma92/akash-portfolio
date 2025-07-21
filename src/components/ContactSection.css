@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* allow it to grow vertically */
+  overflow: hidden;
+}
+
+.background-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.contact-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;  /* align items to the left */
+  align-items: flex-start;
+  padding: 60px 80px; /* padding from top and left */
+  padding-top: 110px;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(40,20,5,0.7),
+    rgba(10,5,2,0.9)
+  );
+  padding: 40px;
+  width: 90%;
+  max-width: none;
+  border: 3px solid #ffd700;
+  border-radius: 20px;
+  font-family: 'Great Vibes', cursive;
+  color: #fffbe6;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card h2 {
+  font-size: 5em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 6px;
+}
+
+.contact-card p {
+  font-size: 3em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4em;
+  gap: 6px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.send-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start; /* leaf icon aligns left */
+  margin-top: 10px;
+}
+
+.leaf-icon {
+  font-size: 3em;
+  color: #ffdd57;
+  transition: transform 0.2s;
+}
+
+.send-btn:hover .leaf-icon {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+
+@media (max-width: 1024px) {
+  .contact-overlay {
+    padding: 40px;
+    justify-content: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .contact-card h2 {
+    font-size: 3.2em;
+  }
+
+  .contact-card p {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-overlay {
+    padding: 30px 20px;
+  }
+
+  .contact-card {
+    padding: 25px;
+    width: 100%;
+  }
+
+  .contact-card h2 {
+    font-size: 2.4em;
+  }
+
+  .contact-card p {
+    font-size: 1.6em;
+  }
+
+  .leaf-icon {
+    font-size: 2em;
+  }
+}
